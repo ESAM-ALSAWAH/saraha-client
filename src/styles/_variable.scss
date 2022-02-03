@@ -1,0 +1,18 @@
+/* fonts */
+$font: poppins;
+@mixin normilaize {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  @media screen and (max-width: 1200px) {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,43 @@
+@import '../../styles/variable';
+.messagesContainer {
+  background-color: #fff;
+  min-width: 260px;
+  width: 100%;
+  border-radius: 5px;
+  user-select: none;
+  height: 80vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+}
+.messageHeader {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 10px;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  color: #3981ed;
+  box-icon {
+    fill: #3981ed;
+  }
+  z-index: 1000;
+}
+.messagesBox {
+  height: 72.3vh;
+  overflow-y: scroll;
+}
+.message {
+  position: relative;
+  padding: 0.5rem 0;
+  padding-inline-end: 3rem;
+  margin-inline: 1rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  word-break: break-all;
+}
+.date {
+  font-size: 11px;
+  color: #233;
+}

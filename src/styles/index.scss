@@ -1,0 +1,23 @@
+@import './Form.scss';
+@import './variable';
+*,
+*::after,
+*::before {
+  @include normilaize;
+}
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #f2f4ff;
+}
+.container {
+  @include container;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

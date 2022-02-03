@@ -1,0 +1,59 @@
+@import '../../styles/variable';
+.messageContainer {
+  position: relative;
+  background-color: #fff;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 5px;
+  user-select: none;
+  height: 70vh;
+  margin: 7rem auto;
+  padding: 2rem 0.5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  text-align: center;
+
+  @media screen and (max-width: 900px) {
+    max-width: 90%;
+  }
+}
+.avatar {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 75px;
+  height: 75px;
+  background-color: #48f;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.name {
+  color: #000;
+  display: block;
+  text-transform: capitalize;
+}
+.textarea {
+  resize: none;
+  width: 80%;
+  height: 50%;
+  padding: 1rem;
+  background-color: rgba(12, 200, 201, 0.02);
+  outline: none;
+  border: 1px solid #48f;
+  display: block;
+  margin: 2rem auto;
+}
+.button {
+  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  background-color: #277ffd;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}

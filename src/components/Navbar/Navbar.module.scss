@@ -1,0 +1,46 @@
+@import '../../styles/variable';
+.navbar {
+  padding: 1rem 0;
+  background-color: #3981ed;
+  user-select: none;
+
+  z-index: 1000;
+}
+.container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  h5 {
+    color: #fff;
+    font-size: 20px;
+  }
+  box-icon {
+    fill: #fff;
+    display: none;
+  }
+
+  span {
+    display: block;
+  }
+  @media screen and (max-width: 768px) {
+    box-icon {
+      display: block;
+    }
+    span {
+      display: none;
+    }
+  }
+}
