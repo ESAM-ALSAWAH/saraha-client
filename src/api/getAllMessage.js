@@ -1,4 +1,9 @@
 import axios from 'axios'
-
-export const getAllMessage = async (UserId) =>
-  await axios.get(`${process.env.REACT_APP_API_GETALLMESSAGE}/${UserId}`)
+import { IsUser } from '../auth'
+const config = {
+  headers: {
+    Authorization: IsUser,
+  },
+}
+export const getAllMessage = async () =>
+  await axios.get(process.env.REACT_APP_API_GETALLMESSAGE, config)

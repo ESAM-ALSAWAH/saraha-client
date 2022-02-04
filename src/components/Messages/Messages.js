@@ -2,9 +2,9 @@ import React from 'react'
 import classes from './Messages.module.scss'
 import { useMessage } from '../../hooks'
 import { useDeleteMessage } from '../../hooks'
-export const Messages = (props) => {
-  const { id } = props
-  const { data: dataMesage, isLoading } = useMessage(id)
+import { getUserID } from '../../auth'
+export const Messages = () => {
+  const { data: dataMesage, isLoading } = useMessage(getUserID())
   const deleteMessage = useDeleteMessage()
   const onDelete = (messageID) => {
     deleteMessage.mutate(messageID)

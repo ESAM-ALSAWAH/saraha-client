@@ -1,11 +1,11 @@
 import React from 'react'
+import jwt_decode from 'jwt-decode'
 import { Navbar, Sidebar, Messages } from '../../components'
 import { useUser } from '../../hooks'
-import { IsUser } from '../../auth'
+import { getUserID } from '../../auth'
 
-const { _id } = !!IsUser && JSON.parse(IsUser)
 export const Home = () => {
-  const { data, isLoading } = useUser(_id)
+  const { data, isLoading } = useUser(getUserID())
 
   if (isLoading) return <p>loading please ...</p>
   return (
@@ -16,7 +16,7 @@ export const Home = () => {
         style={{ display: 'flex ', gap: '50px', marginBlock: '2rem' }}
       >
         <Sidebar data={data} />
-        <Messages id={data._id} />
+        <Messages />
       </main>
     </div>
   )
